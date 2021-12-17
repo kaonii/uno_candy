@@ -1,0 +1,208 @@
+/* 1280x800 */
+
+  p {
+    color: black;
+  }
+
+/* turns score of current player orange */
+  .highlight p {
+    color: orange;
+    font-weight: bold;
+  }
+
+/* background for names and score divs */
+  .back {
+    background-color: white;
+    opacity: 0.5;
+    padding-left: 10px;
+    padding-right: 10px;;
+    border-radius: 5px;
+    border-color: darkgreen;
+  }
+
+  #main-content {
+    height: 100%;
+  }
+
+  #background {
+    background-repeat: no-repeat;
+    height: 100%;
+    margin-top: 10px;
+  }
+
+/* ROWS */
+  .card-row img {
+    max-height: 90px;
+    margin-left: -20px;
+  }
+
+  #row1 {
+    justify-content: center;
+  }
+
+  #row2 {
+    margin-top: 1%;
+    justify-content: center;
+  }
+
+  #row3 {
+    margin-top: 4%;
+    justify-content: end;
+  }
+
+  #row4 {
+    margin-top: 1%;
+    justify-content: space-between;
+  }
+
+  #row5 {
+    margin-top: 1%;
+
+  }
+
+  #row6 {
+    margin-top: 1%;
+    justify-content: center;
+  }
+
+  #row7 {
+    margin-top: 1%;
+    justify-content: end;
+  }
+
+  #row8 {
+    margin-top: 1%;
+    justify-content: end;
+  }
+
+  #row9 {
+    height: 350px;
+  }
+
+/* cards, score and names divs */
+  #player-name-0 {
+    margin-top: 5px;
+    margin-left: -10%;
+  }
+
+  #player-score0 {
+    margin-top: 5px;
+  }
+
+  #player-cards-0 {
+    margin-left: -10%;
+  }
+
+  #player-name-1 {
+    margin-right: 10px;
+  }
+
+  #player-cards-1 {
+    padding-right: 10px;
+  }
+
+  #discard-pile img {
+    position: absolute;
+  }
+
+  #start-button-div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    }
+
+  #start-button {
+    background-repeat: no-repeat;
+    cursor:pointer;
+    background-size: cover;
+    background-color: transparent;
+    border-color: transparent;
+  }
+
+  .cards {
+    height: 80px;
+  }
+
+  .name {
+    height: 20px;
+  }
+
+  .score {
+    height: 20px;
+     }
+
+  .pile {
+    height: 140px;
+  }
+
+  #main-content img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  /* when you play a card  */
+
+  .bigcard {
+    transform: scale(3.3) !important;
+  }
+
+  /* when you draw a card */
+
+  .bigcard2 {
+    transform: scale(2.2) !important;
+  }
+
+  /* when you click on a card you're not allowed to play */
+
+  .cardPlayedWrong {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+  .cupcake-buttons img {
+    width: 200px;
+  }
+
+  .winnerImg {
+    width: 400px;
+    display: block;
+    margin: auto;
+  }
+
+  .winnerText {
+    text-align: center;
+  }
+
+/* top card spins when a card was played */
+@keyframes spinning {
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+}
+
+.spin {
+  animation-name: spinning;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  animation-timing-function: linear;
+}
